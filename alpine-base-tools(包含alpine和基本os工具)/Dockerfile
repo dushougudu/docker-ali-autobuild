@@ -14,6 +14,12 @@ RUN apk update
 # 1. 安装curl
 RUN apk fetch curl
 RUN apk add curl
+# 2. 安装node
+RUN apk add npm
+# 3. 安装java
+RUN apk add openjdk8
+# 4. 安装python3
+RUN apk add python3
 
 # 让容器保持运行，保证不会退出，对应于centOS中的 /usr/sbin/init 命令，（如果要让空系统一直运行该命令必须加）
 CMD init
